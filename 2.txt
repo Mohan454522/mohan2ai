@@ -1,0 +1,13 @@
+mkdir docker-demo
+cd docker-demo
+
+create index.html file 
+
+create docker file 
+
+FROM nginx 
+COPY index.html /usr/share/nginx/html/index.html
+
+docker build -t myweb:v1 .
+
+docker run -d -p 9090:80 myweb:v1
